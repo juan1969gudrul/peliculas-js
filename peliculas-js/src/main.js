@@ -115,3 +115,7 @@ searchInput.addEventListener("keypress", (e) => {
 
 // Función para mostrar el formulario de comentarios
 
+// Si el campo de búsqueda está dentro de un formulario, evita que se recargue la página al presionar "Enter".
+searchInput.form?.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
