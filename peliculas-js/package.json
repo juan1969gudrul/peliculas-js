@@ -2,7 +2,7 @@
   "name": "peliculas-js",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://uan1969gudrul.github.io/peliculas-js",
+  "homepage": "https://juan1969gudrul.github.io/peliculas-js",
   "type": "module",
   "scripts": {
     "dev": "vite",
