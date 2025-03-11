@@ -1,7 +1,10 @@
 peliculas-js
+
+
 Este proyecto es una aplicación web que permite a los usuarios buscar información sobre películas utilizando la API de OMDb. Proporciona una interfaz sencilla para realizar búsquedas y obtener detalles de las películas directamente desde la base de datos de OMDb.
 
 Características
+
 Búsqueda de Películas: Permite a los usuarios buscar películas por título y obtener información detallada como el año de lanzamiento, director, elenco, y una breve sinopsis.
 
 Interfaz de Usuario Intuitiva: Diseñada para ser fácil de usar, con un campo de búsqueda prominente y resultados claros y organizados.
