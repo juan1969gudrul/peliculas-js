@@ -101,5 +101,19 @@ const displayMovies = (movies) => {
   };
   
 // Event Listeners (Eventos)
-
+// Cuando el usuario hace clic en el botón de búsqueda, se ejecuta la función `searchMovies`.
+searchButton.addEventListener("click", () => {
+    searchMovies(searchInput.value);
+  });
+  
+  // Cuando el usuario presiona la tecla "Enter" en el campo de búsqueda, se ejecuta la búsqueda.
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      searchMovies(searchInput.value);
+    }
+  });
 // Prevenir el envío del formulario
+// Si el campo de búsqueda está dentro de un formulario, evita que se recargue la página al presionar "Enter".
+searchInput.form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
