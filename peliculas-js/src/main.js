@@ -73,7 +73,33 @@ const searchMovies = async (query) => {
     }
   };
 // Función para mostrar las películas
-
+const displayMovies = (movies) => {
+    movies.forEach((movie) => {
+      // Crea un contenedor para cada película.
+      const movieCard = document.createElement("div");
+      movieCard.className = "movie-card";
+  
+      // Si la película no tiene póster, se muestra una imagen de marcador de posición.
+      const posterUrl =
+        movie.Poster === "N/A"
+          ? "https://via.placeholder.com/300x450.png?text=No+Poster"
+          : movie.Poster;
+  
+      // Agrega la estructura HTML de la película (imagen, título, año y tipo).
+      movieCard.innerHTML = `
+              <img src="${posterUrl}" alt="${movie.Title}">
+              <div class="movie-info">
+                  <h3>${movie.Title}</h3>
+                  <p>Año: ${movie.Year}</p>
+                  <p>Tipo: ${movie.Type}</p>
+              </div>
+          `;
+  
+      // Agrega la tarjeta de la película al contenedor de resultados.
+      movieResults.appendChild(movieCard);
+    });
+  };
+  
 // Event Listeners (Eventos)
 
 // Prevenir el envío del formulario
